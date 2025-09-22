@@ -25,6 +25,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Interactive developer portfolio featuring a terminal-inspired interface with gamified elements. Built with vanilla HTML, CSS, and JavaScript to showcase technical fundamentals without framework dependencies.
 
+**GitHub Repository:** https://github.com/diogo-costa-silva/webfolio.git
+
 ## Development Commands
 
 ### Build & Development

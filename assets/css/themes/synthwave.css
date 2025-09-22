@@ -1,0 +1,19 @@
+/* Synthwave Theme */
+[data-theme="synthwave"] {
+    --color-background: #0a0a0a;
+    --color-surface: #1a0033;
+    --color-surface-light: #2d1b69;
+    --color-text: #ff00ff;
+    --color-text-muted: #b366ff;
+    --color-primary: #ff00ff;
+    --color-secondary: #00ffff;
+    --color-accent: #ffff00;
+    --terminal-bg: #1a0033;
+    --terminal-text: #ff00ff;
+    --terminal-cursor: #00ffff;
+    --terminal-prompt: #ffff00;
+    --terminal-header: #2d1b69;
+    --glow: 0 0 30px rgba(255, 0, 255, 0.6);
+    --glow-strong: 0 0 50px rgba(255, 0, 255, 0.8);
+    --shadow: 0 10px 30px rgba(255, 0, 255, 0.3);
+}

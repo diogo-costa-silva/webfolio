@@ -1,0 +1,109 @@
+/* Currently Building Section */
+
+.current {
+    background-color: var(--color-surface);
+}
+
+.current__project {
+    background-color: var(--color-background);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    border-left: 4px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.current__project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+    opacity: 0.1;
+    animation: pulse 2s infinite;
+}
+
+.current__name {
+    font-size: var(--font-size-h3);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.current__description {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.current__progress {
+    height: 12px;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+}
+
+.current__progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: var(--border-radius);
+    position: relative;
+    animation: progressFill 2s ease-out;
+}
+
+.current__progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.current__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+}
+
+.current__percent {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.current__eta {
+    color: var(--color-accent);
+}
+
+.current__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .current__project {
+        padding: var(--spacing-md);
+    }
+
+    .current__name {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+    }
+}

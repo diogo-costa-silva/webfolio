@@ -1,0 +1,184 @@
+/* Contact Section Styles */
+
+.contact {
+    background-color: var(--color-background);
+}
+
+.contact__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xxl);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Contact Form */
+.contact__form {
+    background-color: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-mono);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-surface-light);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: var(--color-error);
+}
+
+.form-feedback {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    display: none;
+}
+
+.form-feedback.success {
+    background-color: rgba(39, 201, 63, 0.1);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+    display: block;
+}
+
+.form-feedback.error {
+    background-color: rgba(255, 95, 86, 0.1);
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+    display: block;
+}
+
+/* Contact Info */
+.contact__info {
+    padding: var(--spacing-xl);
+}
+
+.contact__info h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.social-links a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-surface-light);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--glow);
+}
+
+.contact__location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* Behind the Code Section */
+.behind {
+    background-color: var(--color-surface);
+    padding: var(--spacing-xxl) 0;
+}
+
+.behind__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.behind__item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition);
+}
+
+.behind__item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.behind__icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.behind__item h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-md);
+}
+
+.behind__item p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact__form,
+    .contact__info {
+        padding: var(--spacing-md);
+    }
+
+    .behind__grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-md);
+    }
+}

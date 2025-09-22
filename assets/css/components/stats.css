@@ -1,0 +1,95 @@
+/* Developer Stats Dashboard Styles */
+
+.stats {
+    background-color: var(--color-surface);
+    position: relative;
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: var(--color-background);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        var(--color-primary) 0%,
+        var(--color-accent) 50%,
+        var(--color-secondary) 100%
+    );
+    transform: scaleX(0);
+    transition: transform var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: var(--glow);
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-card__number {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    margin-bottom: var(--spacing-xs);
+    min-height: 40px;
+}
+
+.stat-card__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Number Animation */
+.stat-card__number.counting {
+    animation: countUp var(--animation-duration) ease-out;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .stats__grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .stat-card {
+        padding: var(--spacing-md);
+    }
+
+    .stat-card__icon {
+        font-size: 2rem;
+    }
+
+    .stat-card__number {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+}

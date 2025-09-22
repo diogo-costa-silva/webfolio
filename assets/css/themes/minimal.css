@@ -1,0 +1,18 @@
+/* Minimal Theme */
+[data-theme="minimal"] {
+    --color-background: #ffffff;
+    --color-surface: #fafafa;
+    --color-surface-light: #f0f0f0;
+    --color-text: #000000;
+    --color-text-muted: #888888;
+    --color-primary: #000000;
+    --color-secondary: #666666;
+    --color-accent: #333333;
+    --terminal-bg: #ffffff;
+    --terminal-text: #000000;
+    --terminal-cursor: #000000;
+    --terminal-prompt: #666666;
+    --terminal-header: #f0f0f0;
+    --glow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}

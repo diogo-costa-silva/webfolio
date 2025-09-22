@@ -1,0 +1,18 @@
+/* Light Theme */
+[data-theme="light"] {
+    --color-background: #ffffff;
+    --color-surface: #f5f5f5;
+    --color-surface-light: #e0e0e0;
+    --color-text: #1a1a1a;
+    --color-text-muted: #666666;
+    --color-primary: #00a82d;
+    --color-secondary: #dc2626;
+    --color-accent: #f59e0b;
+    --terminal-bg: #f5f5f5;
+    --terminal-text: #1a1a1a;
+    --terminal-cursor: #00a82d;
+    --terminal-prompt: #dc2626;
+    --terminal-header: #e0e0e0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --glow: 0 0 20px rgba(0, 168, 45, 0.3);
+}
