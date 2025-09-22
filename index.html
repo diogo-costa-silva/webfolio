@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Interactive developer portfolio featuring a terminal-inspired interface. Full-stack developer passionate about creating unique digital experiences.">
+    <meta name="keywords" content="developer, portfolio, web developer, full-stack, programming, terminal">
+    <meta name="author" content="Diogo Silva">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Diogo Silva - Developer Portfolio">
+    <meta property="og:description" content="Interactive terminal-inspired developer portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="/assets/images/misc/og-image.jpg">
+
+    <title>Diogo Silva | Developer Portfolio v1.0.0</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/misc/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar__brand">
+                <span class="navbar__logo">DS</span>
+            </div>
+
+            <ul class="navbar__menu" id="navbarMenu">
+                <li><a href="#home" class="navbar__link" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="navbar__link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" class="navbar__link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" class="navbar__link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" class="navbar__link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <!-- Language Toggle -->
+                <button class="btn-icon" id="languageToggle" aria-label="Change language">
+                    <span class="lang-indicator">EN</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar__hamburger" id="hamburgerMenu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Terminal Interface -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="terminal" id="terminal">
+                <div class="terminal__header">
+                    <div class="terminal__controls">
+                        <span class="terminal__control terminal__control--close"></span>
+                        <span class="terminal__control terminal__control--minimize"></span>
+                        <span class="terminal__control terminal__control--maximize"></span>
+                    </div>
+                    <div class="terminal__title">terminal@diogo-silva</div>
+                </div>
+                <div class="terminal__body">
+                    <div class="terminal__output" id="terminalOutput"></div>
+                    <div class="terminal__input-line">
+                        <span class="terminal__prompt">$</span>
+                        <input type="text" class="terminal__input" id="terminalInput" autocomplete="off" spellcheck="false">
+                        <span class="terminal__cursor"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Commands for Mobile -->
+            <div class="quick-commands">
+                <button class="quick-command" data-command="help">help</button>
+                <button class="quick-command" data-command="whoami">whoami</button>
+                <button class="quick-command" data-command="skills">skills</button>
+                <button class="quick-command" data-command="projects">projects</button>
+                <button class="quick-command" data-command="cv">cv</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Stats Dashboard -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section__title" data-i18n="stats.title">Developer Stats</h2>
+            <div class="stats__grid">
+                <div class="stat-card">
+                    <div class="stat-card__icon">📝</div>
+                    <div class="stat-card__number" data-target="50000">0</div>
+                    <div class="stat-card__label" data-i18n="stats.linesOfCode">Lines of Code</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">🚀</div>
+                    <div class="stat-card__number" data-target="25">0</div>
+                    <div class="stat-card__label" data-i18n="stats.projects">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">☕</div>
+                    <div class="stat-card__number" data-target="1337">0</div>
+                    <div class="stat-card__label" data-i18n="stats.coffee">Cups of Coffee</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">📚</div>
+                    <div class="stat-card__number" data-target="730">0</div>
+                    <div class="stat-card__label" data-i18n="stats.learning">Days Learning</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">🐛</div>
+                    <div class="stat-card__number" data-target="99">0</div>
+                    <div class="stat-card__label" data-i18n="stats.bugs">Bugs Squashed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">💾</div>
+                    <div class="stat-card__number" data-target="2000">0</div>
+                    <div class="stat-card__label" data-i18n="stats.commits">Git Commits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me + Journey Timeline -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section__title" data-i18n="about.title">About Me</h2>
+
+            <div class="about__content">
+                <div class="about__profile">
+                    <div class="profile-image">
+                        <img src="/docs/perfil_diogo.png" alt="Diogo Silva" loading="lazy">
+                    </div>
+                    <div class="profile-info">
+                        <h3 data-i18n="about.name">Diogo Silva</h3>
+                        <p class="profile-title" data-i18n="about.role">Full-Stack Developer</p>
+                        <p class="profile-status" data-i18n="about.status">🟢 Actively seeking opportunities</p>
+                        <p class="profile-bio" data-i18n="about.bio">
+                            Passionate developer focused on creating unique digital experiences.
+                            I believe in the power of clean code and creative solutions to solve complex problems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Journey Timeline -->
+                <div class="timeline">
+                    <h3 class="timeline__title" data-i18n="timeline.title">My Journey</h3>
+                    <div class="timeline__container">
+                        <div class="timeline__item">
+                            <div class="timeline__date">2021</div>
+                            <div class="timeline__content">
+                                <h4 data-i18n="timeline.firstCode">First "Hello World"</h4>
+                                <p data-i18n="timeline.firstCodeDesc">Started my programming journey with Python</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2022</div>
+                            <div class="timeline__content">
+                                <h4 data-i18n="timeline.webDev">Web Development</h4>
+                                <p data-i18n="timeline.webDevDesc">Discovered the world of HTML, CSS, and JavaScript</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2023</div>
+                            <div class="timeline__content">
+                                <h4 data-i18n="timeline.firstProject">First Real Project</h4>
+                                <p data-i18n="timeline.firstProjectDesc">Built my first complete web application</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2024</div>
+                            <div class="timeline__content">
+                                <h4 data-i18n="timeline.current">Full-Stack Journey</h4>
+                                <p data-i18n="timeline.currentDesc">Mastering both frontend and backend technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills - Gamified Tech Stack -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section__title" data-i18n="skills.title">Tech Stack</h2>
+
+            <div class="skills__filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+                <button class="filter-btn" data-filter="learning">Learning</button>
+            </div>
+
+            <div class="skills__grid" id="skillsGrid">
+                <!-- Skill cards will be dynamically loaded -->
+            </div>
+
+            <!-- Currently Learning -->
+            <div class="learning">
+                <h3 class="learning__title" data-i18n="skills.learning">Currently Learning</h3>
+                <div class="learning__items">
+                    <div class="learning__item">
+                        <span class="learning__name">TypeScript</span>
+                        <div class="learning__progress">
+                            <div class="learning__progress-bar" style="width: 70%"></div>
+                        </div>
+                        <span class="learning__percent">70%</span>
+                    </div>
+                    <div class="learning__item">
+                        <span class="learning__name">React Native</span>
+                        <div class="learning__progress">
+                            <div class="learning__progress-bar" style="width: 45%"></div>
+                        </div>
+                        <span class="learning__percent">45%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects - Problem/Solution Showcase -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section__title" data-i18n="projects.title">Projects</h2>
+
+            <div class="projects__filter">
+                <select class="projects__sort" id="projectSort">
+                    <option value="date" data-i18n="projects.sortDate">Sort by Date</option>
+                    <option value="difficulty" data-i18n="projects.sortDifficulty">Sort by Difficulty</option>
+                    <option value="tech" data-i18n="projects.sortTech">Sort by Technology</option>
+                </select>
+            </div>
+
+            <div class="projects__grid" id="projectsGrid">
+                <!-- Project cards will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently Building -->
+    <section id="current" class="current">
+        <div class="container">
+            <h2 class="section__title" data-i18n="current.title">Currently Building</h2>
+            <div class="current__project">
+                <h3 class="current__name">Portfolio Website</h3>
+                <p class="current__description" data-i18n="current.desc">
+                    Creating this interactive portfolio with terminal interface and gamified elements
+                </p>
+                <div class="current__progress">
+                    <div class="current__progress-bar" style="width: 75%"></div>
+                </div>
+                <div class="current__info">
+                    <span class="current__percent">75% Complete</span>
+                    <span class="current__eta">ETA: 2 weeks</span>
+                </div>
+                <div class="current__tech">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Behind the Code -->
+    <section id="behind" class="behind">
+        <div class="container">
+            <h2 class="section__title" data-i18n="behind.title">Behind the Code</h2>
+            <div class="behind__grid">
+                <div class="behind__item">
+                    <div class="behind__icon">🎮</div>
+                    <h3 data-i18n="behind.gaming">Gaming</h3>
+                    <p data-i18n="behind.gamingDesc">Problem-solving skills from strategy games</p>
+                </div>
+                <div class="behind__item">
+                    <div class="behind__icon">🎵</div>
+                    <h3 data-i18n="behind.music">Music</h3>
+                    <p data-i18n="behind.musicDesc">Pattern recognition from playing instruments</p>
+                </div>
+                <div class="behind__item">
+                    <div class="behind__icon">📚</div>
+                    <h3 data-i18n="behind.reading">Reading</h3>
+                    <p data-i18n="behind.readingDesc">Documentation skills from technical books</p>
+                </div>
+                <div class="behind__item">
+                    <div class="behind__icon">☕</div>
+                    <h3 data-i18n="behind.coffee">Coffee</h3>
+                    <p data-i18n="behind.coffeeDesc">Essential fuel for late night coding sessions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section__title" data-i18n="contact.title">Let's Connect</h2>
+
+            <div class="contact__content">
+                <form class="contact__form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" data-i18n="contact.subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send Message</button>
+                    <div class="form-feedback" id="formFeedback"></div>
+                </form>
+
+                <div class="contact__info">
+                    <h3 data-i18n="contact.findMe">Find me on</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:your.email@example.com" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-10 5L2 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="contact__location">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-i18n="contact.location">Portugal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.copyright">© 2024 Diogo Silva. All rights reserved.</p>
+            <p class="footer__version">v1.0.0</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span>[^↑ TOP]</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
