@@ -1,10 +1,70 @@
 // Main JavaScript Entry Point
 
-document.addEventListener('DOMContentLoaded', () => {
+// Load all scripts in order
+const scripts = [
+    '/assets/js/utils/commands.js',
+    '/assets/js/modules/terminal.js',
+    '/assets/js/modules/navigation.js',
+    '/assets/js/modules/theme.js',
+    '/assets/js/modules/stats.js',
+    '/assets/js/modules/skills.js',
+    '/assets/js/modules/projects.js'
+];
+
+// Load scripts sequentially
+async function loadScripts() {
+    for (const script of scripts) {
+        await loadScript(script);
+    }
+}
+
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+}
+
+// Initialize all modules after scripts are loaded
+async function initializeApp() {
     console.log('Portfolio v1.0.0 - Initializing...');
 
-    // Initialize modules when they are created
-    // This file will import and initialize all modules
+    // Load scripts
+    await loadScripts();
+
+    // Initialize modules
+    const terminal = new window.Terminal();
+    const navigation = new window.Navigation();
+    const themeManager = new window.ThemeManager();
+    const statsCounter = new window.StatsCounter();
+    const skillsManager = new window.SkillsManager();
+    const projectsManager = new window.ProjectsManager();
+
+    // Store instances globally for debugging
+    window.app = {
+        terminal,
+        navigation,
+        themeManager,
+        statsCounter,
+        skillsManager,
+        projectsManager
+    };
+
+    // Add console easter egg
+    console.log('%c🎉 Hey there, curious developer!', 'color: #00ff41; font-size: 20px; font-weight: bold;');
+    console.log('%cYou found the console! Since you\'re here, you might be interested in the source code.', 'color: #00ff41; font-size: 14px;');
+    console.log('%cCheck out the GitHub repo: https://github.com/diogo-costa-silva/webfolio', 'color: #ffb626; font-size: 14px;');
+    console.log('%cOr type "hack" in the terminal for some fun! 😉', 'color: #ff5555; font-size: 14px;');
 
     console.log('Portfolio ready! Type "help" in the terminal for available commands.');
-});
+}
+
+// Start the app when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+    initializeApp();
+}

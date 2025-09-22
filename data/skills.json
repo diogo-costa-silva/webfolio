@@ -1,0 +1,164 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "HTML5",
+      "category": "frontend",
+      "level": 5,
+      "experience": "3+ years",
+      "projects": 25,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "rarity": "common"
+    },
+    {
+      "id": 2,
+      "name": "CSS3",
+      "category": "frontend",
+      "level": 5,
+      "experience": "3+ years",
+      "projects": 25,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "rarity": "common"
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "category": "frontend",
+      "level": 4,
+      "experience": "2+ years",
+      "projects": 20,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      "rarity": "rare"
+    },
+    {
+      "id": 4,
+      "name": "React",
+      "category": "frontend",
+      "level": 3,
+      "experience": "1+ year",
+      "projects": 8,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "rarity": "epic"
+    },
+    {
+      "id": 5,
+      "name": "Vue.js",
+      "category": "frontend",
+      "level": 3,
+      "experience": "1 year",
+      "projects": 5,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      "rarity": "rare"
+    },
+    {
+      "id": 6,
+      "name": "Node.js",
+      "category": "backend",
+      "level": 3,
+      "experience": "1.5 years",
+      "projects": 10,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      "rarity": "epic"
+    },
+    {
+      "id": 7,
+      "name": "Python",
+      "category": "backend",
+      "level": 4,
+      "experience": "2+ years",
+      "projects": 15,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      "rarity": "rare"
+    },
+    {
+      "id": 8,
+      "name": "PHP",
+      "category": "backend",
+      "level": 3,
+      "experience": "1 year",
+      "projects": 6,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+      "rarity": "common"
+    },
+    {
+      "id": 9,
+      "name": "MySQL",
+      "category": "backend",
+      "level": 4,
+      "experience": "2 years",
+      "projects": 12,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      "rarity": "common"
+    },
+    {
+      "id": 10,
+      "name": "MongoDB",
+      "category": "backend",
+      "level": 3,
+      "experience": "1 year",
+      "projects": 5,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      "rarity": "rare"
+    },
+    {
+      "id": 11,
+      "name": "Git",
+      "category": "tools",
+      "level": 4,
+      "experience": "3 years",
+      "projects": 30,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      "rarity": "common"
+    },
+    {
+      "id": 12,
+      "name": "Docker",
+      "category": "tools",
+      "level": 2,
+      "experience": "6 months",
+      "projects": 3,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      "rarity": "legendary"
+    },
+    {
+      "id": 13,
+      "name": "VS Code",
+      "category": "tools",
+      "level": 5,
+      "experience": "3+ years",
+      "projects": 30,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+      "rarity": "common"
+    },
+    {
+      "id": 14,
+      "name": "Webpack",
+      "category": "tools",
+      "level": 3,
+      "experience": "1 year",
+      "projects": 8,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
+      "rarity": "rare"
+    },
+    {
+      "id": 15,
+      "name": "TypeScript",
+      "category": "learning",
+      "level": 2,
+      "experience": "Learning",
+      "projects": 2,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "rarity": "epic"
+    },
+    {
+      "id": 16,
+      "name": "React Native",
+      "category": "learning",
+      "level": 1,
+      "experience": "Learning",
+      "projects": 0,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "rarity": "legendary"
+    }
+  ]
+}
