@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Competências",
+    "projects": "Projetos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "welcome": "Bem-vindo ao Portfolio de Diogo Silva v1.0.0",
+    "typeHelp": "Escreva 'help' para ver os comandos disponíveis"
+  },
+  "stats": {
+    "title": "Estatísticas",
+    "linesOfCode": "Linhas de Código",
+    "projects": "Projetos Concluídos",
+    "coffee": "Chávenas de Café",
+    "learning": "Dias a Aprender",
+    "bugs": "Bugs Resolvidos",
+    "commits": "Commits Git"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "name": "Diogo Silva",
+    "role": "Desenvolvedor Full-Stack",
+    "status": "🟢 À procura de oportunidades",
+    "bio": "Desenvolvedor apaixonado por criar experiências digitais únicas. Acredito no poder do código limpo e soluções criativas para resolver problemas complexos.",
+    "location": "Portugal"
+  },
+  "timeline": {
+    "title": "A Minha Jornada",
+    "firstCode": "Primeiro \"Hello World\"",
+    "firstCodeDesc": "Iniciei a minha jornada de programação com Python",
+    "webDev": "Desenvolvimento Web",
+    "webDevDesc": "Descobri o mundo do HTML, CSS e JavaScript",
+    "firstProject": "Primeiro Projeto Real",
+    "firstProjectDesc": "Construí a minha primeira aplicação web completa",
+    "current": "Jornada Full-Stack",
+    "currentDesc": "A dominar tecnologias frontend e backend"
+  },
+  "skills": {
+    "title": "Stack Tecnológica",
+    "learning": "A Aprender",
+    "allSkills": "Todas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Ferramentas",
+    "learningSkills": "A Aprender"
+  },
+  "projects": {
+    "title": "Projetos",
+    "sortDate": "Ordenar por Data",
+    "sortDifficulty": "Ordenar por Dificuldade",
+    "sortTech": "Ordenar por Tecnologia",
+    "viewDemo": "Ver Demo",
+    "viewCode": "Ver Código",
+    "problem": "Problema",
+    "solution": "Solução",
+    "result": "Resultado"
+  },
+  "current": {
+    "title": "A Construir",
+    "desc": "A criar este portfolio interativo com interface terminal e elementos gamificados",
+    "complete": "Completo",
+    "eta": "Previsão"
+  },
+  "behind": {
+    "title": "Por Trás do Código",
+    "gaming": "Gaming",
+    "gamingDesc": "Competências de resolução de problemas através de jogos",
+    "music": "Música",
+    "musicDesc": "Reconhecimento de padrões através de instrumentos",
+    "reading": "Leitura",
+    "readingDesc": "Competências de documentação através de livros técnicos",
+    "coffee": "Café",
+    "coffeeDesc": "Combustível essencial para sessões de código noturnas"
+  },
+  "contact": {
+    "title": "Vamos Conversar",
+    "name": "Nome",
+    "email": "Email",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "findMe": "Encontra-me em",
+    "location": "Portugal",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Falha ao enviar mensagem. Por favor tente novamente."
+  },
+  "footer": {
+    "copyright": "© 2024 Diogo Silva. Todos os direitos reservados."
+  },
+  "terminal": {
+    "commands": {
+      "notFound": "Comando não encontrado. Escreva 'help' para ver comandos disponíveis.",
+      "downloading": "A transferir CV...",
+      "navigating": "A navegar para a secção...",
+      "themeChanged": "Tema alterado para",
+      "invalidTheme": "Tema inválido. Temas disponíveis:",
+      "currentTheme": "Tema atual:"
+    }
+  }
+}

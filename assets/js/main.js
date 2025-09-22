@@ -8,7 +8,11 @@ const scripts = [
     '/assets/js/modules/theme.js',
     '/assets/js/modules/stats.js',
     '/assets/js/modules/skills.js',
-    '/assets/js/modules/projects.js'
+    '/assets/js/modules/projects.js',
+    '/assets/js/modules/i18n.js',
+    '/assets/js/modules/easter-eggs.js',
+    '/assets/js/modules/animations.js',
+    '/assets/js/modules/form.js'
 ];
 
 // Load scripts sequentially
@@ -42,6 +46,10 @@ async function initializeApp() {
     const statsCounter = new window.StatsCounter();
     const skillsManager = new window.SkillsManager();
     const projectsManager = new window.ProjectsManager();
+    const i18nManager = new window.I18nManager();
+    const easterEggs = new window.EasterEggs();
+    const scrollAnimations = new window.ScrollAnimations();
+    const formManager = new window.FormManager();
 
     // Store instances globally for debugging
     window.app = {
@@ -50,7 +58,11 @@ async function initializeApp() {
         themeManager,
         statsCounter,
         skillsManager,
-        projectsManager
+        projectsManager,
+        i18nManager,
+        easterEggs,
+        scrollAnimations,
+        formManager
     };
 
     // Add console easter egg

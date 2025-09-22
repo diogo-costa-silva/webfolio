@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "Welcome to Diogo Silva's Portfolio v1.0.0",
+    "typeHelp": "Type 'help' for available commands"
+  },
+  "stats": {
+    "title": "Developer Stats",
+    "linesOfCode": "Lines of Code",
+    "projects": "Projects Completed",
+    "coffee": "Cups of Coffee",
+    "learning": "Days Learning",
+    "bugs": "Bugs Squashed",
+    "commits": "Git Commits"
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Diogo Silva",
+    "role": "Full-Stack Developer",
+    "status": "🟢 Actively seeking opportunities",
+    "bio": "Passionate developer focused on creating unique digital experiences. I believe in the power of clean code and creative solutions to solve complex problems.",
+    "location": "Portugal"
+  },
+  "timeline": {
+    "title": "My Journey",
+    "firstCode": "First \"Hello World\"",
+    "firstCodeDesc": "Started my programming journey with Python",
+    "webDev": "Web Development",
+    "webDevDesc": "Discovered the world of HTML, CSS, and JavaScript",
+    "firstProject": "First Real Project",
+    "firstProjectDesc": "Built my first complete web application",
+    "current": "Full-Stack Journey",
+    "currentDesc": "Mastering both frontend and backend technologies"
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "learning": "Currently Learning",
+    "allSkills": "All",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "learningSkills": "Learning"
+  },
+  "projects": {
+    "title": "Projects",
+    "sortDate": "Sort by Date",
+    "sortDifficulty": "Sort by Difficulty",
+    "sortTech": "Sort by Technology",
+    "viewDemo": "Live Demo",
+    "viewCode": "View Code",
+    "problem": "Problem",
+    "solution": "Solution",
+    "result": "Result"
+  },
+  "current": {
+    "title": "Currently Building",
+    "desc": "Creating this interactive portfolio with terminal interface and gamified elements",
+    "complete": "Complete",
+    "eta": "ETA"
+  },
+  "behind": {
+    "title": "Behind the Code",
+    "gaming": "Gaming",
+    "gamingDesc": "Problem-solving skills from strategy games",
+    "music": "Music",
+    "musicDesc": "Pattern recognition from playing instruments",
+    "reading": "Reading",
+    "readingDesc": "Documentation skills from technical books",
+    "coffee": "Coffee",
+    "coffeeDesc": "Essential fuel for late night coding sessions"
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "findMe": "Find me on",
+    "location": "Portugal",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2024 Diogo Silva. All rights reserved."
+  },
+  "terminal": {
+    "commands": {
+      "notFound": "Command not found. Type 'help' for available commands.",
+      "downloading": "Downloading CV...",
+      "navigating": "Navigating to section...",
+      "themeChanged": "Theme changed to",
+      "invalidTheme": "Invalid theme. Available themes:",
+      "currentTheme": "Current theme:"
+    }
+  }
+}

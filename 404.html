@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Diogo Silva</title>
+
+    <style>
+        :root {
+            --color-primary: #00ff41;
+            --color-background: #0f1419;
+            --color-text: #e6e6e6;
+            --font-mono: 'Courier New', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            color: var(--color-primary);
+            text-shadow: 0 0 30px var(--color-primary);
+            margin-bottom: 1rem;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% {
+                text-shadow: 0 0 30px var(--color-primary);
+            }
+            20% {
+                text-shadow: 3px 0 30px #ff0000, -3px 0 30px #00ffff;
+            }
+            40% {
+                text-shadow: -3px 0 30px #ff00ff, 3px 0 30px #ffff00;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .terminal-404 {
+            background-color: #1a1f2e;
+            border: 2px solid var(--color-primary);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .terminal-404__line {
+            margin: 4px 0;
+        }
+
+        .prompt {
+            color: #ff5555;
+        }
+
+        .command {
+            color: var(--color-primary);
+        }
+
+        .game-container {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 2px solid var(--color-primary);
+            border-radius: 8px;
+            background: #1a1f2e;
+        }
+
+        #game-canvas {
+            background: #000;
+            border: 1px solid var(--color-primary);
+        }
+
+        .game-score {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--color-primary);
+            color: var(--color-background);
+            box-shadow: 0 0 20px var(--color-primary);
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .matrix-column {
+            position: absolute;
+            color: var(--color-primary);
+            font-size: 10px;
+            white-space: nowrap;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg" id="matrixBg"></div>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p>Looks like you've ventured into uncharted digital territory!</p>
+
+        <div class="terminal-404">
+            <div class="terminal-404__line">
+                <span class="prompt">$</span> <span class="command">ls /requested/page</span>
+            </div>
+            <div class="terminal-404__line">
+                ls: cannot access '/requested/page': No such file or directory
+            </div>
+            <div class="terminal-404__line">
+                <span class="prompt">$</span> <span class="command">find / -name "page"</span>
+            </div>
+            <div class="terminal-404__line">
+                find: '/requested/page': Permission denied
+            </div>
+            <div class="terminal-404__line">
+                <span class="prompt">$</span> <span class="command">sudo find_page --force</span>
+            </div>
+            <div class="terminal-404__line">
+                [sudo] password for visitor: _
+            </div>
+        </div>
+
+        <div class="game-container">
+            <h2>While you're here, play Snake!</h2>
+            <p>Use arrow keys to control</p>
+            <canvas id="game-canvas" width="400" height="300"></canvas>
+            <div class="game-score">Score: <span id="score">0</span></div>
+        </div>
+
+        <div class="buttons">
+            <a href="/" class="btn">Go Home</a>
+            <button class="btn" onclick="history.back()">Go Back</button>
+        </div>
+    </div>
+
+    <script>
+        // Matrix rain effect
+        function createMatrixRain() {
+            const container = document.getElementById('matrixBg');
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+
+            for (let i = 0; i < 20; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDuration = (Math.random() * 10 + 5) + 's';
+                column.style.animationDelay = Math.random() * 5 + 's';
+
+                let text = '';
+                for (let j = 0; j < 30; j++) {
+                    text += characters[Math.floor(Math.random() * characters.length)] + '<br>';
+                }
+                column.innerHTML = text;
+                container.appendChild(column);
+            }
+        }
+
+        // Simple Snake Game
+        const canvas = document.getElementById('game-canvas');
+        const ctx = canvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+
+        const gridSize = 20;
+        const tileCount = canvas.width / gridSize;
+
+        let snake = [
+            {x: 10, y: 10}
+        ];
+        let food = {
+            x: Math.floor(Math.random() * tileCount),
+            y: Math.floor(Math.random() * tileCount)
+        };
+        let dx = 0;
+        let dy = 0;
+        let score = 0;
+
+        function drawGame() {
+            // Clear canvas
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Move snake
+            const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+
+            // Check walls
+            if (head.x < 0) head.x = tileCount - 1;
+            if (head.x >= tileCount) head.x = 0;
+            if (head.y < 0) head.y = tileCount - 1;
+            if (head.y >= tileCount) head.y = 0;
+
+            snake.unshift(head);
+
+            // Check food collision
+            if (head.x === food.x && head.y === food.y) {
+                score++;
+                scoreElement.textContent = score;
+                food = {
+                    x: Math.floor(Math.random() * tileCount),
+                    y: Math.floor(Math.random() * tileCount)
+                };
+            } else {
+                snake.pop();
+            }
+
+            // Draw snake
+            ctx.fillStyle = '#00ff41';
+            snake.forEach(segment => {
+                ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize - 2, gridSize - 2);
+            });
+
+            // Draw food
+            ctx.fillStyle = '#ff5555';
+            ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2);
+
+            // Check self collision
+            for (let i = 1; i < snake.length; i++) {
+                if (head.x === snake[i].x && head.y === snake[i].y) {
+                    // Game over
+                    snake = [{x: 10, y: 10}];
+                    dx = 0;
+                    dy = 0;
+                    score = 0;
+                    scoreElement.textContent = score;
+                }
+            }
+        }
+
+        // Controls
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowUp':
+                    if (dy === 0) {
+                        dx = 0;
+                        dy = -1;
+                    }
+                    break;
+                case 'ArrowDown':
+                    if (dy === 0) {
+                        dx = 0;
+                        dy = 1;
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (dx === 0) {
+                        dx = -1;
+                        dy = 0;
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (dx === 0) {
+                        dx = 1;
+                        dy = 0;
+                    }
+                    break;
+            }
+        });
+
+        // Game loop
+        setInterval(drawGame, 100);
+
+        // Initialize
+        createMatrixRain();
+        drawGame();
+
+        // Console easter egg
+        console.log('%c🎮 You found the 404 page!', 'color: #00ff41; font-size: 20px;');
+        console.log('%cTry to beat the high score in Snake!', 'color: #ff5555; font-size: 14px;');
+    </script>
+</body>
+</html>
